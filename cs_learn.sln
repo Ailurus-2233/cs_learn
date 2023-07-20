@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决�
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "learn21_asynchronous", "learn21_asynchronous\learn21_asynchronous.csproj", "{737A91AA-824D-4B7F-BB15-EF3E5A0AE23F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{969DFA39-901E-40B7-9DEE-A1491B8D4F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{969DFA39-901E-40B7-9DEE-A1491B8D4F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{969DFA39-901E-40B7-9DEE-A1491B8D4F83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{737A91AA-824D-4B7F-BB15-EF3E5A0AE23F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{737A91AA-824D-4B7F-BB15-EF3E5A0AE23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{737A91AA-824D-4B7F-BB15-EF3E5A0AE23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{737A91AA-824D-4B7F-BB15-EF3E5A0AE23F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
