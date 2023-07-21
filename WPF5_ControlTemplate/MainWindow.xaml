@@ -1,0 +1,35 @@
+﻿<Window x:Class="WPF5_ControlTemplate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF5_ControlTemplate"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="450">
+    <Window.Resources>
+        <SolidColorBrush x:Name="ButtonBackground" 
+                         x:Key="Button.Background" 
+                         Color="Green" />
+        <ControlTemplate x:Key="buttonTemplate" 
+                         TargetType="{x:Type Button}">
+            <Border Background="{TemplateBinding Background}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+        </ControlTemplate>
+        <Style x:Key="ButtonStyle1" 
+               TargetType="{x:Type Button}">
+            <Setter Property="Template" 
+                    Value="{StaticResource buttonTemplate}" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Button Style="{StaticResource ButtonStyle1}" 
+                Content="Test"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center" Click="ButtonClickChangeColor"
+                Background="{DynamicResource Button.Background}"
+                />
+        <!-- 添加一个按钮，点击按钮，改变按钮的背景颜色.动态绑定了资源 Button.Background 每次点击修改这个资源 -->
+    </Grid>
+</Window>
