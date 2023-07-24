@@ -4,6 +4,63 @@
              xmlns:local="clr-namespace:WPF_Training_ToDoList"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="MenuItemStyle" TargetType="RadioButton">
+            <Setter Property="Template" Value="{DynamicResource MenuItemTemplate}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Grid Background="Transparent">
+                            <!-- <Border x:Name="border_background" /> -->
+                            <!-- <Border x:Name="border_line" Margin="5 12 5 12" /> -->
+                            <ContentPresenter />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <!-- <Trigger Property="IsMouseOver" Value="True"> -->
+                            <!--     <Setter Property="Background" Value="#F0F6F6" TargetName="border_background" /> -->
+                            <!-- </Trigger> -->
+                            <!-- <Trigger Property="IsChecked" Value="True"> -->
+                            <!--     <Setter Property="Background" Value="Red" TargetName="border_background" /> -->
+                            <!--     <Setter Property="Opacity" Value="0.05" TargetName="border_background" /> -->
+                            <!-- -->
+                            <!--     <Setter Property="FontWeight" Value="Bold" /> -->
+                            <!--     <Setter Property="Foreground" Value="Red" /> -->
+                            <!-- -->
+                            <!--     <Setter Property="BorderThickness" Value="2 0 0 0" TargetName="border_line" /> -->
+                            <!--     <Setter Property="BorderBrush" Value="Red" TargetName="border_line" /> -->
+                            <!-- </Trigger> -->
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="IconTextStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="./resource/fonts/#iconfont" />
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10 0 0 0"/>
+        </Style>
+
+
+        <ControlTemplate x:Key="MenuItemTemplate" TargetType="{x:Type RadioButton}">
+            <Grid Background="Transparent">
+                <ContentPresenter />
+            </Grid>
+            <!-- <ControlTemplate.Triggers> -->
+            <!--     <Trigger Property="IsMouseOver" Value="True"> -->
+            <!--         <Setter Property="Background" Value="#F0F6F6" TargetName="border_background" /> -->
+            <!--     </Trigger> -->
+            <!--     <Trigger Property="IsChecked" Value="True"> -->
+            <!--         <Setter Property="Background" Value="Red" TargetName="border_background" /> -->
+            <!--         <Setter Property="Opacity" Value="0.05" TargetName="border_background" /> -->
+            <!-- -->
+            <!--         <Setter Property="FontWeight" Value="Bold" /> -->
+            <!--         <Setter Property="Foreground" Value="Red" /> -->
+            <!-- -->
+            <!--         <Setter Property="BorderThickness" Value="2 0 0 0" TargetName="border_line" /> -->
+            <!--         <Setter Property="BorderBrush" Value="Red" TargetName="border_line" /> -->
+            <!--     </Trigger> -->
+            <!-- </ControlTemplate.Triggers> -->
+        </ControlTemplate>
     </Application.Resources>
 </Application>

@@ -7,4 +7,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="resource\fonts\iconfont.ttf" />
+    <None Remove="resource\images\icon.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resource\fonts\iconfont.ttf" />
+    <Resource Include="resource\images\icon.jpg" />
+  </ItemGroup>
+
 </Project>

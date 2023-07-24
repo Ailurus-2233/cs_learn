@@ -24,5 +24,6 @@ namespace WPF_Training_ToDoList
         {
             InitializeComponent();
         }
+
     }
 }

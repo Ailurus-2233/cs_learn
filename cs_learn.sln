@@ -10,15 +10,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决�
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learn21_asynchronous", "learn21_asynchronous\learn21_asynchronous.csproj", "{737A91AA-824D-4B7F-BB15-EF3E5A0AE23F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Learn21_asynchronous", "learn21_asynchronous\Learn21_asynchronous.csproj", "{737A91AA-824D-4B7F-BB15-EF3E5A0AE23F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF5_ControlTemplate", "WPF5_ControlTemplate\WPF5_ControlTemplate.csproj", "{4AA6CCA2-42EB-4137-A6A1-7A6AF8B7A742}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF6_DataTemplate", "WPF6_DataTemplate\WPF6_DataTemplate.csproj", "{4BCC2921-BD98-4A23-85D4-EF386BD6A2DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF6_DataTemplate", "WPF6_DataTemplate\WPF6_DataTemplate.csproj", "{4BCC2921-BD98-4A23-85D4-EF386BD6A2DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF7_Binding", "WPF7_Binding\WPF7_Binding.csproj", "{BF022AA9-1F39-4232-A15E-4C333B2321F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF7_Binding", "WPF7_Binding\WPF7_Binding.csproj", "{BF022AA9-1F39-4232-A15E-4C333B2321F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Training_ToDoList", "WPF_Training_ToDoList\WPF_Training_ToDoList.csproj", "{314FE68C-B62F-4B1B-86C1-58DB04174D45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Training_ToDoList", "WPF_Training_ToDoList\WPF_Training_ToDoList.csproj", "{314FE68C-B62F-4B1B-86C1-58DB04174D45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Test", "WPF_Test\WPF_Test.csproj", "{B59F8399-2E15-46A4-A2A2-CF3E9B7D5F17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learn08_ExpressionsAndOperators", "Learn8_ExpressionsAndOperators\Learn08_ExpressionsAndOperators.csproj", "{47228C2C-6643-4F10-BA4C-E82EE3679280}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learn09_Statement", "Learn09_Statement\Learn09_Statement.csproj", "{1B155B37-E811-40F0-B5AD-75154A24E023}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +56,18 @@ Global
 		{314FE68C-B62F-4B1B-86C1-58DB04174D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{314FE68C-B62F-4B1B-86C1-58DB04174D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{314FE68C-B62F-4B1B-86C1-58DB04174D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B59F8399-2E15-46A4-A2A2-CF3E9B7D5F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B59F8399-2E15-46A4-A2A2-CF3E9B7D5F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B59F8399-2E15-46A4-A2A2-CF3E9B7D5F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B59F8399-2E15-46A4-A2A2-CF3E9B7D5F17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47228C2C-6643-4F10-BA4C-E82EE3679280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47228C2C-6643-4F10-BA4C-E82EE3679280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47228C2C-6643-4F10-BA4C-E82EE3679280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47228C2C-6643-4F10-BA4C-E82EE3679280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B155B37-E811-40F0-B5AD-75154A24E023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B155B37-E811-40F0-B5AD-75154A24E023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B155B37-E811-40F0-B5AD-75154A24E023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B155B37-E811-40F0-B5AD-75154A24E023}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

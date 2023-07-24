@@ -4,31 +4,83 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Training_ToDoList"
+        xmlns:viewModel="clr-namespace:WPF_Training_ToDoList.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="1000">
+    <Window.DataContext>
+        <viewModel:TaskGroupViewModel />
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="280" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <DockPanel LastChildFill="False">
-            <TextBlock Text="Microsoft To Do" Margin="10 10 0 20" DockPanel.Dock="Top"/>
+        <DockPanel LastChildFill="True">
+            <TextBlock Text="Microsoft To Do" Margin="10 10 0 20" DockPanel.Dock="Top" />
             <DockPanel DockPanel.Dock="Top" LastChildFill="False">
-                <Image Source="./resource/images/icon.jpg" Width="30" Height="30" Margin="10 0 0 0">
+                <Image Source="./resource/images/icon.jpg" Width="30" Height="30" Margin="15 0 0 0">
                     <Image.Clip>
-                        <EllipseGeometry Center="15,15" RadiusX="15" RadiusY="15"/>
+                        <EllipseGeometry Center="15,15" RadiusX="15" RadiusY="15" />
                     </Image.Clip>
                 </Image>
-                <TextBlock Text="憨憨的小熊" VerticalAlignment="Center" Margin="10 0 0 0"/>
-                <TextBlock Text="&#xe645;" 
-                           FontFamily="./resource/fonts/#iconfont" 
-                           VerticalAlignment="Center" 
+                <TextBlock Text="憨憨的小熊" VerticalAlignment="Center" Margin="10 0 0 0" />
+                <TextBlock Text="&#xe645;"
+                           Style="{StaticResource IconTextStyle}"
                            DockPanel.Dock="Right"
-                           Margin="0 0 10 0"/>
-                
-                
-                
+                           Margin="0 0 10 0" />
             </DockPanel>
+            <ListBox BorderThickness="0" ItemsSource="{Binding TaskMenuItems}">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Setter Property="Height" Value="45" />
+                        <Setter Property="Margin" Value="0 1 0 0" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                    <Grid>
+                                        <Border x:Name="background" CornerRadius="5" Margin="2" />
+                                        <Border x:Name="border" BorderThickness="1.5 0 0 0 " Margin="5 10 5 10" />
+                                        <ContentPresenter />
+                                    </Grid>
+
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="background" Property="Background" Value="#F0F6F6" />
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                            <Setter Property="Foreground" Value="{Binding BackgroundColor}" />
+                                            <Setter Property="Background" TargetName="background"
+                                                    Value="{Binding BackgroundColor}" />
+                                            <Setter Property="Opacity" TargetName="background" Value="0.2" />
+                                            <Setter Property="BorderBrush" TargetName="border"
+                                                    Value="{Binding BackgroundColor}" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <!-- <RadioButton Style="{StaticResource MenuItemStyle}"> -->
+                        <DockPanel Background="Transparent" LastChildFill="False" Margin="5 0 0 0">
+                            <TextBlock Text="{Binding Icon}" Style="{StaticResource IconTextStyle}"
+                                       Foreground="{Binding BackgroundColor}" />
+                            <TextBlock Text="{Binding Name}" Margin="10 0 0 0" VerticalAlignment="Center" FontSize="14" />
+
+                            <TextBlock Text="{Binding Count}" DockPanel.Dock="Right" VerticalAlignment="Center"
+                                       Margin="0 0 12 0" FontWeight="Light" />
+                        </DockPanel>
+                        <!-- </RadioButton> -->
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </DockPanel>
+
+        <Border Grid.Column="1" Background="Green"></Border>
     </Grid>
 </Window>
