@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WPF_Test
+namespace WPF_learn3_Binding
 {
     /// <summary>
     /// Interaction logic for App.xaml

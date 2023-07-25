@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPF7_Binding.Model
+namespace WPF6_Binding.Model
 {
     public class ViewModel
     {

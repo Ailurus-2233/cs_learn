@@ -13,7 +13,7 @@ namespace Learn8_ExpressionsAndOperators
             // var fields = t.GetFields();
             // var methods = t.GetMethods();
             // var properties = t.GetProperties();
-            // var constructors = t.GetConstructors();
+            // var constructors = t.GetConstructors();vo
             // var events = t.GetEvents();
             // var members = t.GetMembers();
             // var nestedTypes = t.GetNestedTypes();

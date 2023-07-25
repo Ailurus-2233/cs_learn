@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var value = 1.2224231232;
+            Console.WriteLine($"{value, 4:F}");
         }
     }
 }
