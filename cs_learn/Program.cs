@@ -1,21 +1,35 @@
-﻿namespace cs_learn
+﻿using System.Collections.ObjectModel;
+
+namespace cs_learn
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var a = new int[][] { new int[] {1, 2, 3}, new int[] {2,3}, new int[] {3,4,5,6} };
-            var b = new int[3, 3, 3];
-            Console.WriteLine(a.Length);
-            Console.WriteLine(b.Rank);
+            ObservableCollection<Student> students = new ObservableCollection<Student>();
+            students.Add(new Student() {Name="A", Id=1});
+            students.Add(new Student() { Name="B", Id=2});
+            students.Add(new Student() { Id=3, Name="C"});
+            students.Add(new Student() {Id=4, Name="D"});
+            students.Add(new Student() {Id=5, Name="E"});
+
+            var stu = students.ToList().Find(t => t.Id == 4);
+            if (stu  != null)
+            {
+                stu.Name = "A";
+            }
+
+            foreach (var student in students)
+            {
+                Console.WriteLine($"No.{student.Id}-{student.Name}");
+            }
+
         }
 
-        // [Flags]
-        enum Color:uint
+        class Student
         {
-            Yellow  = 0x01, //0
-            Red     = 0x02, //1
-            Blue    = 0x04  //2
+            public string? Name { get; set; }
+            public int Id {get; set; }
         }
     }
 }
